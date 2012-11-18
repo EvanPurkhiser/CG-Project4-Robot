@@ -17,7 +17,7 @@ bin/robot: bin/Main.o bin/Robot/Application.o bin/Robot/FrameListender.o
 
 .PHONY:
 clean:
-	rm -rf bin
+	rm -rf bin ogre.cfg ogre.log
 
 .PHONY:
 execute:
