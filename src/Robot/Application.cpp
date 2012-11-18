@@ -67,8 +67,8 @@ void Robot::Application::createScene()
  */
 void Robot::Application::destroyScene()
 {
-    this->mSceneMgr->destroyEntity(this->robotEntity);
-    this->mSceneMgr->clearScene();
+	this->mSceneMgr->destroyEntity(this->robotEntity);
+	this->mSceneMgr->clearScene();
 }
 
 /**
@@ -76,10 +76,10 @@ void Robot::Application::destroyScene()
  */
 void Robot::Application::createCamera()
 {
-    ExampleApplication::createCamera();
+	ExampleApplication::createCamera();
 
-    this->mCamera->setPosition(100, 100, 100);
-    this->mCamera->lookAt(0, 40, 0);
+	this->mCamera->setPosition(100, 100, 100);
+	this->mCamera->lookAt(0, 40, 0);
 }
 
 /**
