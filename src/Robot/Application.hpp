@@ -9,6 +9,10 @@ namespace Robot
 class Application : public ExampleApplication
 {
 
+private:
+
+	Ogre::Entity* robotEntity;
+
 public:
 
 	/**
@@ -31,9 +35,6 @@ public:
 	 */
 	void createCamera();
 
-private:
-
-	Ogre::Entity* robotEntity;
 
 };
 
