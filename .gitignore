@@ -1,4 +1,4 @@
 bin/
 *.dll
 ogre.cfg
-Ogre.log
+ogre.log

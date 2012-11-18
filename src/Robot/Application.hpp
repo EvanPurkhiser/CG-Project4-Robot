@@ -12,6 +12,11 @@ class Application : public ExampleApplication
 public:
 
 	/**
+	 * Setup the application
+	 */
+	bool configure();
+
+	/**
 	 * Createe the Scene
 	 */
 	void createScene();
