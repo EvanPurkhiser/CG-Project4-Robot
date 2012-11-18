@@ -9,11 +9,11 @@ bin/Main.o: src/Main.cpp
 bin/Robot/Application.o: src/Robot/Application.cpp
 	g++ -c src/Robot/Application.cpp -o bin/Robot/Application.o
 
-bin/Robot/FrameListender.o:  src/Robot/FrameListender.cpp
-	g++ -c src/Robot/FrameListender.cpp -o bin/Robot/FrameListender.o
+bin/Robot/FrameListener.o:  src/Robot/FrameListener.cpp
+	g++ -c src/Robot/FrameListener.cpp -o bin/Robot/FrameListener.o
 
-bin/robot: bin/Main.o bin/Robot/Application.o bin/Robot/FrameListender.o
-	g++ bin/Main.o bin/Robot/Application.o bin/Robot/FrameListender.o -o bin/robot -l boost_system -l OgreMain -l OIS
+bin/robot: bin/Main.o bin/Robot/Application.o bin/Robot/FrameListener.o
+	g++ bin/Main.o bin/Robot/Application.o bin/Robot/FrameListener.o -o bin/robot -l boost_system -l OgreMain -l OIS
 
 .PHONY:
 clean:
