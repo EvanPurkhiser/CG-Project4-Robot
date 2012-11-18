@@ -60,6 +60,13 @@ bool Robot::FrameListener::frameRenderingQueued(const Ogre::FrameEvent& evt)
 		this->currentAnimation = this->robotEntity->getAnimationState("Walk");
 	}
 
+	// Handle quiting
+	if (this->inputKeyboard->isKeyDown(OIS::KC_ESCAPE) ||
+		this->inputKeyboard->isKeyDown(OIS::KC_Q))
+	{
+		return FALSE;
+	}
+
 	// Increment the animation
 	this->currentAnimation->setEnabled(true);
 	this->currentAnimation->setLoop(true);
