@@ -1,7 +1,24 @@
-all: bin/robot
+all: bin/Robot bin/robot
 
-bin/robot: src/robot.cpp src/common/shader.cpp
-	g++ src/robot.cpp src/common/shader.cpp src/common/texture.cpp -o bin/robot -l glew32s -l glfw -l opengl32 -static -D GLEW_STATIC
+bin/Robot:
+	mkdir -p bin/Robot
 
-run: bin/robot
+bin/Main.o: src/Main.cpp
+	g++ -c src/Main.cpp -o bin/Main.o
+
+bin/Robot/Application.o: src/Robot/Application.cpp
+	g++ -c src/Robot/Application.cpp -o bin/Robot/Application.o
+
+bin/Robot/FrameListender.o:  src/Robot/FrameListender.cpp
+	g++ -c src/Robot/FrameListender.cpp -o bin/Robot/FrameListender.o
+
+bin/robot: bin/Main.o bin/Robot/Application.o bin/Robot/FrameListender.o
+	g++ bin/Main.o bin/Robot/Application.o bin/Robot/FrameListender.o -o bin/robot -l boost_system -l OgreMain -l OIS
+
+.PHONY:
+clean:
+	rm -rf bin
+
+.PHONY:
+execute:
 	./bin/robot
