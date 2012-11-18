@@ -61,8 +61,9 @@ bool Robot::FrameListener::frameRenderingQueued(const Ogre::FrameEvent& evt)
 	}
 
 	// Handle quiting
-	if (this->inputKeyboard->isKeyDown(OIS::KC_ESCAPE) ||
-		this->inputKeyboard->isKeyDown(OIS::KC_Q))
+	if (this->inputKeyboard->isKeyDown(OIS::KC_ESCAPE)
+		|| this->inputKeyboard->isKeyDown(OIS::KC_Q)
+		|| this->root->getAutoCreatedWindow()->isClosed())
 	{
 		return FALSE;
 	}
