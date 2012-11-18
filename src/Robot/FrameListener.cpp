@@ -58,6 +58,17 @@ bool Robot::FrameListener::frameRenderingQueued(const Ogre::FrameEvent& evt)
 	if (this->inputKeyboard->isKeyDown(OIS::KC_W))
 	{
 		this->currentAnimation = this->robotEntity->getAnimationState("Walk");
+
+		// Move it forward
+		this->robotEntity->getParentNode()
+			->translate(20 * evt.timeSinceLastFrame, 0, 0);
+
+		// Follow it with the camera
+		this->root
+			->getSceneManager("ExampleSMInstance")
+			->getCamera("PlayerCam")
+			->lookAt(this->robotEntity->getParentNode()
+				->getPosition() + Ogre::Vector3(0, 35, 0));
 	}
 
 	// Handle quiting
