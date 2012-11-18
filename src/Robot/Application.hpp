@@ -17,9 +17,18 @@ public:
 	bool configure();
 
 	/**
-	 * Createe the Scene
+	 * Create the Scene
 	 */
 	void createScene();
+
+	/**
+	 * Setup the camera
+	 */
+	void createCamera();
+
+private:
+
+	Ogre::Entity* robotEntity;
 
 };
 
