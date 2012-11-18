@@ -28,6 +28,11 @@ public:
 	FrameListener(Ogre::Root* root);
 
 	/**
+	 * Handle cleanup
+	 */
+	~FrameListener();
+
+	/**
 	 * Handle each frame tick
 	 *
 	 * @param evt The frame event

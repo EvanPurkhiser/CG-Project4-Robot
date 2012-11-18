@@ -28,6 +28,15 @@ Robot::FrameListener::FrameListener(Ogre::Root* root) : root(root)
 }
 
 /**
+ * Cleanup the input systems
+ */
+Robot::FrameListener::~FrameListener()
+{
+	this->inputManager->destroyInputObject(this->inputKeyboard);
+	OIS::InputManager::destroyInputSystem(this->inputManager);
+}
+
+/**
  * Handle each frame tick
  *
  * @param evt The frame event
