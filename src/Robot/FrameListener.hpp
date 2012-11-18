@@ -12,7 +12,13 @@ class FrameListener : public Ogre::FrameListener
 
 private:
 
+	OIS::InputManager* inputManager;
+	OIS::Keyboard*     inputKeyboard;
+
 	Ogre::Root*   root;
+	Ogre::Entity* robotEntity;
+
+	Ogre::AnimationState* currentAnimation;
 
 public:
 
@@ -20,6 +26,13 @@ public:
 	 * Setup the frame listener
 	 */
 	FrameListener(Ogre::Root* root);
+
+	/**
+	 * Handle each frame tick
+	 *
+	 * @param evt The frame event
+	 */
+	bool frameRenderingQueued(const Ogre::FrameEvent& evt);
 
 };
 
