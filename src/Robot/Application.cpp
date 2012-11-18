@@ -1,4 +1,5 @@
 #include "Application.hpp"
+#include "FrameListener.hpp"
 
 /**
  * Setup application configuration options
@@ -79,4 +80,12 @@ void Robot::Application::createCamera()
 
     this->mCamera->setPosition(100, 100, 100);
     this->mCamera->lookAt(0, 40, 0);
+}
+
+/**
+ * Setup our frame listener
+ */
+void Robot::Application::createFrameListener()
+{
+	this->mRoot->addFrameListener(new Robot::FrameListener(this->mRoot));
 }

@@ -35,6 +35,10 @@ public:
 	 */
 	void createCamera();
 
+	/**
+	 * Setup the frame listener
+	 */
+	void createFrameListener();
 
 };
 
