@@ -22,6 +22,11 @@ public:
 	void createScene();
 
 	/**
+	 * Cleanup the scene on destruct
+	 */
+	void destroyScene();
+
+	/**
 	 * Setup the camera
 	 */
 	void createCamera();

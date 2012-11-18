@@ -62,6 +62,15 @@ void Robot::Application::createScene()
 }
 
 /**
+ * Cleanup the scene
+ */
+void Robot::Application::destroyScene()
+{
+    this->mSceneMgr->destroyEntity(this->robotEntity);
+    this->mSceneMgr->clearScene();
+}
+
+/**
  * Setup the camera pointing to the center of the scene
  */
 void Robot::Application::createCamera()
