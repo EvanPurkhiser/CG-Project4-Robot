@@ -20,5 +20,5 @@ clean:
 	rm -rf bin ogre.cfg ogre.log
 
 .PHONY:
-execute:
+execute: bin/robot
 	./bin/robot
