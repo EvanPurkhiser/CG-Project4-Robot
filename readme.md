@@ -24,5 +24,5 @@ utility.
 
 Steps for building and testing (assuming GNU make)
 
- 1. `$ make`
- 2. `$ make execute`
+    $ make
+    $ make execute
