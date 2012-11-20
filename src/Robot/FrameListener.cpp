@@ -76,7 +76,7 @@ bool Robot::FrameListener::frameRenderingQueued(const Ogre::FrameEvent& evt)
 		|| this->inputKeyboard->isKeyDown(OIS::KC_Q)
 		|| this->root->getAutoCreatedWindow()->isClosed())
 	{
-		return FALSE;
+		return false;
 	}
 
 	// Increment the animation
