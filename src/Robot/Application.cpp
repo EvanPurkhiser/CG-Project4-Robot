@@ -7,7 +7,7 @@
 bool Robot::Application::configure()
 {
 	// Always load the GL render system
-	this->mRoot->loadPlugin("RenderSystem_GL");
+	this->mRoot->loadPlugin("./RenderSystem_GL");
 
 	// Get the GL Render system and set it on the root
 	Ogre::RenderSystem* RS = this->mRoot->getAvailableRenderers()[0];
